@@ -2,4 +2,28 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #ffb703;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  margin: 5rem auto;
+  max-width: 950px;
+}
+
+.card {
+  width: 50%;
+  height: 500px;
+  background-color: #fdfffc;
+
+  margin: 0 0.1rem;
+  border-radius: 5px;
+}
+
+.left {
+  box-shadow: -10px 10px 15px #d49901;
+}
+.right {
+  box-shadow: 10px 10px 15px #d49901;
 }
