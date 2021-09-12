@@ -87,3 +87,8 @@ body {
   border-radius: 10px;
   box-shadow: -5px 3px 2px #dfdfdf;
 }
+
+.dice i {
+  font-size: 4.7rem;
+  color: #255879;
+}
