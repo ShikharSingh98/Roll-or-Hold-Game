@@ -9,7 +9,7 @@
   </head>
   <body>
     <main class="container">
-      <section class="card left">
+      <section class="card active">
         <div class="scorecard">
           <h2>PLAYER 1</h2>
           <span class="score" id="playerOneScore">0</span>
@@ -19,14 +19,21 @@
           <span class="current-score" id="playerOneCurrentScore">0</span>
         </div>
       </section>
-      <section class="card right">
+      <section class="controller">
+        <button class="btn" id="new-game-button">🌀 New Game</button>
+        <div>
+          <button class="btn" id="roll-dice-button">🎲 Roll Dice</button>
+          <button class="btn" id="hold-button">🛑 Hold</button>
+        </div>
+      </section>
+      <section class="card">
         <div class="scorecard">
           <h2>PLAYER 2</h2>
           <span class="score" id="playerTwoScore">0</span>
         </div>
         <div class="scorecard current-scorecard">
           <h3>CURRENT SCORE</h3>
-          <span class="current-score" id="playerOneCurrentScore">0</span>
+          <span class="current-score" id="playerTwoCurrentScore">0</span>
         </div>
       </section>
     </main>
