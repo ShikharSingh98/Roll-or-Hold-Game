@@ -1,5 +1,6 @@
 const dice = document.querySelector('#dice');
 const rollDiceButton = document.querySelector('#roll-dice-button');
+
 const numbers = ['one', 'two', 'three', 'four', 'five', 'six'];
 
 rollDiceButton.addEventListener('click', function () {
