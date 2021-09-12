@@ -1,29 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #ffb703;
+  background-color: #e63946;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .container {
   display: flex;
   justify-content: space-around;
-  margin: 5rem auto;
+  margin: 3.5rem auto;
   max-width: 950px;
 }
 
 .card {
   width: 50%;
-  height: 500px;
-  background-color: #fdfffc;
-
-  margin: 0 0.1rem;
+  height: 600px;
+  background-color: #fff;
+  margin: 0 0.05rem;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .left {
-  box-shadow: -10px 10px 15px #d49901;
+  box-shadow: -10px 10px 15px #bb202d;
 }
 .right {
-  box-shadow: 10px 10px 15px #d49901;
+  box-shadow: 10px 10px 15px #bb202d;
+}
+
+.scorecard {
+  text-align: center;
+}
+
+.scorecard h2 {
+  font-size: 2.5rem;
+  color: #457b9d;
+}
+
+.score {
+  font-size: 3.5rem;
+  color: #e63946;
+}
+
+.current-scorecard {
+  border-radius: 10px;
+  padding: 0.5rem 1.8rem;
+  background-color: #e63946;
+  color: white;
+}
+
+.current-scorecard h3 {
+  font-size: 1.5rem;
+}
+
+.current-score {
+  font-size: 2rem;
 }
