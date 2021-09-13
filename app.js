@@ -1,7 +1,5 @@
 const dice = document.querySelector('#dice');
 const rollDiceButton = document.querySelector('#roll-dice-button');
-const playerOneCurrentScore = document.querySelector('#player-one-current-score');
-const playerTwoCurrentScore = document.querySelector('#player-two-current-score');
 
 const numbers = ['one', 'two', 'three', 'four', 'five', 'six'];
 let numberOnDice = 0;
@@ -11,11 +9,18 @@ let currentScore = 0;
 let activePlayer = 'one';
 
 function switchPlayer() {
+  //Remove the active class from current active player
+  document.querySelector(`#player-${activePlayer}-card`).classList.remove('active');
+
+  //Change the active player
   if (activePlayer === 'one') {
     activePlayer = 'two';
   } else {
     activePlayer = 'one';
   }
+
+  //Add the active class to new active player
+  document.querySelector(`#player-${activePlayer}-card`).classList.add('active');
 }
 
 function displayCurrentScore() {
