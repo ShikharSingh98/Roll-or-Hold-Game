@@ -42,6 +42,13 @@ function displayCurrentScore() {
   }
 }
 
+function displayWinner(winner) {
+  document.querySelector(`#player-${winner}-card`).classList.add('winner');
+  document.querySelector(`#player-${winner}-tag`).textContent = '🏆';
+  rollDiceButton.disabled = true;
+  holdButton.disabled = true;
+}
+
 rollDiceButton.addEventListener('click', function () {
   const number = Math.trunc(Math.random() * 6) + 1;
   numberOnDice = number;
@@ -57,5 +64,13 @@ holdButton.addEventListener('click', function () {
     totalScoreTwo += currentScore;
     document.querySelector(`#player-${activePlayer}-score`).textContent = totalScoreTwo;
   }
+
+  if (totalScoreOne >= 50) {
+    displayWinner('one');
+  }
+  if (totalScoreTwo >= 50) {
+    displayWinner('two');
+  }
+
   switchPlayer();
 });

@@ -31,6 +31,10 @@ body {
   background-color: #fff;
 }
 
+.winner {
+  background-color: #aaf683;
+}
+
 .scorecard {
   text-align: center;
 }
