@@ -1,4 +1,5 @@
 const dice = document.querySelector('#dice');
+const newGameButton = document.querySelector('#new-game-button');
 const rollDiceButton = document.querySelector('#roll-dice-button');
 const holdButton = document.querySelector('#hold-button');
 
@@ -73,4 +74,34 @@ holdButton.addEventListener('click', function () {
   }
 
   switchPlayer();
+});
+
+newGameButton.addEventListener('click', function () {
+  // Resetting all the scores to zero
+  currentScore = 0;
+  totalScoreOne = 0;
+  totalScoreTwo = 0;
+
+  // Displaying the scores after resetting
+  document.querySelector(`#player-one-score`).textContent = totalScoreOne;
+  document.querySelector(`#player-two-score`).textContent = totalScoreTwo;
+  document.querySelector(`#player-${activePlayer}-current-score`).textContent = currentScore;
+
+  // Resetting the active player to one
+  document.querySelector(`#player-${activePlayer}-card`).classList.remove('active');
+  activePlayer = 'one';
+  document.querySelector(`#player-${activePlayer}-card`).classList.add('active');
+
+  // Resetting the dice
+  dice.className = '';
+
+  //Resetting the winning card back to default
+  document.querySelector(`#player-one-card`).classList.remove('winner');
+  document.querySelector(`#player-one-tag`).textContent = '';
+  document.querySelector(`#player-two-card`).classList.remove('winner');
+  document.querySelector(`#player-two-tag`).textContent = '';
+
+  //Enabling the buttons
+  rollDiceButton.disabled = false;
+  holdButton.disabled = false;
 });
