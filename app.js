@@ -2,6 +2,9 @@ const dice = document.querySelector('#dice');
 const newGameButton = document.querySelector('#new-game-button');
 const rollDiceButton = document.querySelector('#roll-dice-button');
 const holdButton = document.querySelector('#hold-button');
+const openModalButton = document.querySelector('#open-modal-button');
+const closeModalButton = document.querySelector('#close-modal-button');
+const modalContainer = document.querySelector('.modal-container');
 
 const numbers = ['one', 'two', 'three', 'four', 'five', 'six'];
 let numberOnDice = 0;
@@ -104,4 +107,12 @@ newGameButton.addEventListener('click', function () {
   //Enabling the buttons
   rollDiceButton.disabled = false;
   holdButton.disabled = false;
+});
+
+openModalButton.addEventListener('click', function () {
+  modalContainer.classList.add('show-modal');
+});
+
+closeModalButton.addEventListener('click', function () {
+  modalContainer.classList.remove('show-modal');
 });
