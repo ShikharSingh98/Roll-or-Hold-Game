@@ -116,3 +116,9 @@ openModalButton.addEventListener('click', function () {
 closeModalButton.addEventListener('click', function () {
   modalContainer.classList.remove('show-modal');
 });
+
+modalContainer.addEventListener('click', function (event) {
+  if (event.target === modalContainer) {
+    modalContainer.classList.remove('show-modal');
+  }
+});
